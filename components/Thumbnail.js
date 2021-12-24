@@ -1,12 +1,11 @@
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image"
-import { forwardRef } from "react";
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+function Thumbnail({ result }){
     const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
     return (
-        <div ref={ref} className="p-2 group cursor-pointer 
+        <div className="p-2 group cursor-pointer 
         transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50">
             <Image 
                 layout="responsive"
@@ -34,6 +33,6 @@ const Thumbnail = forwardRef(({ result }, ref) => {
             </div>
         </div>
     )
-})
+}
 
 export default Thumbnail;
